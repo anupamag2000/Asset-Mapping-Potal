@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Data</title>
+
+    <!-- Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Leaflet Draw CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+    <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+
+    <!-- Turf.js for geospatial calculations -->
+    <script src="https://unpkg.com/turf/turf.min.js"></script>
+
+    <!-- Shp.js for shapefile handling -->
+    <script src="https://unpkg.com/shpjs/dist/shp.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Earth Logo -->
+    <img src="earth_logo.png" alt="Earth Logo" class="earth-logo" />
+
+    <!-- Header -->
+    <h1>World of Data</h1>
+
+    <!-- Left Sidebar for basemap and layers -->
+    <div class="sidebar left">
+        <h3>Basemap</h3>
+        <button id="osm-basemap">OpenStreetMap</button>
+        <button id="satellite-basemap">Satellite</button>
+
+        <h3>Shapefile Repository</h3>
+        <div id="layer-checkboxes">
+            <!-- Checkboxes for shapefiles will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Right Sidebar for tools -->
+    <div class="sidebar right">
+        <h3>Tools</h3>
+        <button id="measurement-tool"><i class="fas fa-ruler-combined"></i> Measurement</button>
+        <button id="buffer-tool"><i class="fas fa-bullseye"></i> Buffer Analysis</button>
+        <button id="clear-tool"><i class="fas fa-trash-alt"></i> Clear All Layers</button>
+    </div>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Empowering Geospatial Exploration | World of Data</p>
+    </div>
+
+    <!-- Main JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
